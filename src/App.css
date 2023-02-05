@@ -1,6 +1,6 @@
 :root {
   --dark-green: #549051;
-  --white: #dadce5;
+  --white: #ebebec;
 }
 
 *,
@@ -92,8 +92,9 @@ body {
 }
 
 .hero-text {
+  width: 15ch;
   font-weight: 600;
-  font-size: 1.9rem;
+  font-size: 2rem;
   text-align: center;
   margin-top: 2em;
   color: white;
@@ -131,7 +132,8 @@ body {
   margin: 1.5em 0em;
 }
 
-.weekly {
+.weekly,
+.deep-clean {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -139,12 +141,14 @@ body {
   gap: 1.5rem;
 }
 
-.duster {
+.duster,
+.spray {
   width: 5rem;
   margin: 0.5em 0em;
 }
 
-.weekly-desc {
+.weekly-desc,
+.deep-clean-desc {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -152,12 +156,14 @@ body {
   flex-direction: column;
 }
 
-.weekly-title {
+.weekly-title,
+.deep-clean-title {
   font-size: 1.2rem;
   margin: 0.5em 0em;
 }
 
-.weekly-paragraph {
+.weekly-paragraph,
+.deep-clean-paragraph {
   font-size: 1rem;
 }
 
