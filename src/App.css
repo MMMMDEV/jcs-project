@@ -1,6 +1,8 @@
 :root {
   --dark-green: #549051;
-  --white: #ebebec;
+  --white: #e8e9f3;
+  --gray: #dadce5;
+  --padding: 1.5em;
 }
 
 *,
@@ -41,27 +43,27 @@ body {
 
 .Header {
   width: 100%;
-  height: 7rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  padding: 0em 1em;
+  padding: 0em var(--padding);
 }
 
 .logo {
-  width: 14rem;
+  width: 13rem;
 }
 
 .contact-btn {
-  width: 6rem;
-  height: 2.5rem;
+  width: 5.5rem;
+  height: 2.4rem;
   border: 0px solid transparent;
   background: var(--dark-green);
   border-radius: 0.4rem;
   color: white;
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* --- Hero --- */
@@ -87,22 +89,22 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
 .hero-text {
   width: 15ch;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.1rem;
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1em;
   color: white;
   z-index: 1;
 }
 
 .hero-cta-btn {
-  width: 12rem;
+  width: 11rem;
   height: 3rem;
   border: 0px solid transparent;
   border-radius: 0.8rem;
@@ -110,6 +112,7 @@ body {
   color: white;
   margin-bottom: 2em;
   z-index: 1;
+  font-size: 0.9rem;
 }
 
 /* --- Services --- */
@@ -120,16 +123,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2em 1em;
+  padding: 4em var(--padding);
   font-family: "Lato", sans-serif;
   gap: 1rem;
 }
 
 .services-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   align-self: flex-start;
-  margin: 1.5em 0em;
+  margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
 .weekly,
@@ -158,7 +162,7 @@ body {
 
 .weekly-title,
 .deep-clean-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0.5em 0em;
 }
 
@@ -175,4 +179,55 @@ body {
   background-color: transparent;
   text-align: start;
   font-style: italic;
+}
+
+/* --- Reviews --- */
+
+.Reviews {
+  width: 100%;
+  height: 16rem;
+  background-color: var(--gray);
+  padding: 0em var(--padding);
+  font-family: "Lato", sans-serif;
+}
+
+.Review {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-rating-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star {
+  width: 1.5rem;
+  margin: 1.5em 0em;
+}
+
+.service-type-title {
+  font-size: 1rem;
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.message-review {
+  width: 30ch;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.name-review {
+  align-self: flex-end;
 }

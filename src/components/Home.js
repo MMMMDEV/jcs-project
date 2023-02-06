@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../images/Logo.png";
 import duster from "../images/duster.png";
 import spray from "../images/spray-bottle.png";
+import Review from "./Review.js";
 
 export default function Home() {
   return (
@@ -60,11 +61,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="Products">
-        <h1>Products</h1>
-      </div>
       <div className="Reviews">
-        <h1>Reviews</h1>
+        <Review />
       </div>
       <form className="Form">
         <h1>Form</h1>
