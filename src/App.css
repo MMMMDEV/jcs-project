@@ -4,6 +4,7 @@
   --gray: #dadce5;
   --padding: 1.5em;
   --header-height: 6rem;
+  --animation-speed: 2s;
 }
 
 *:focus {
@@ -60,6 +61,8 @@ body {
 
 .logo {
   width: 13rem;
+  transform: translateY(calc(var(--header-height) * -1));
+  animation: slideInVertical var(--animation-speed) forwards;
 }
 
 .contact-link {
@@ -75,6 +78,8 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 0.9rem;
   text-decoration: none;
+  transform: translateY(calc(var(--header-height) * -1));
+  animation: slideInVertical var(--animation-speed) forwards;
 }
 
 .contact-link:visited,
@@ -117,6 +122,9 @@ body {
   margin-top: 1.5em;
   color: white;
   z-index: 1;
+  transform: translateX(-10rem);
+  opacity: 0;
+  animation: slideInSides var(--animation-speed) forwards;
 }
 
 .hero-cta-btn {
@@ -129,6 +137,9 @@ body {
   margin-bottom: 2.5em;
   z-index: 1;
   font-size: 0.9rem;
+  transform: translateX(-10rem);
+  opacity: 0;
+  animation: slideInSides var(--animation-speed) forwards;
 }
 
 /* --- Services --- */
@@ -143,6 +154,9 @@ body {
   font-family: "Lato", sans-serif;
   position: relative;
   gap: 3rem;
+  transform: translateX(-20rem);
+  opacity: 0;
+  transition: var(--animation-speed) ease-in-out;
 }
 
 .services-title {
@@ -261,6 +275,9 @@ li {
   background-color: var(--gray);
   font-family: "Lato", sans-serif;
   position: relative;
+  transform: translateX(-20rem);
+  opacity: 0;
+  transition: var(--animation-speed) ease-in-out;
 }
 
 .Review {
@@ -351,6 +368,9 @@ li {
   flex-direction: column;
   padding: 2em var(--padding);
   font-family: "Lato", sans-serif;
+  transform: translateX(-20rem);
+  opacity: 0;
+  transition: var(--animation-speed) ease-in-out;
 }
 
 .form {
@@ -511,6 +531,26 @@ li {
   top: 56px;
   left: 12px;
 }
+
+/* animations */
+.inViewX {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes slideInSides {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInVertical {
+  to {
+    transform: translateY(0);
+  }
+}
+
 @keyframes lds-roller {
   0% {
     transform: rotate(0deg);

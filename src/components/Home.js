@@ -8,6 +8,7 @@ import right from "../images/right.svg";
 import closeIcon from "../images/close.svg";
 import DeepModalText from "./DeepModalText";
 import WeekModalText from "./WeekModalText";
+import { useInView } from "react-intersection-observer";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -18,6 +19,9 @@ export default function Home() {
   const [overlay, setOverlay] = useState("overlay-all");
   const [classActiveModalWeek, setclassActiveModalWeek] = useState(false);
   const [classActiveModalDeep, setclassActiveModalDeep] = useState(false);
+  const { ref: refServices, inView: servicesIsVisible } = useInView();
+  const { ref: refReviews, inView: reviewsIsVisible } = useInView();
+  const { ref: refForm, inView: formIsVisible } = useInView();
 
   function addCount() {
     if (count < 3) {
@@ -119,7 +123,10 @@ export default function Home() {
             <button className="hero-cta-btn">Get a quick estimate!</button>
             <div className="overlay"></div>
           </div>
-          <div className="Services">
+          <div
+            ref={refServices}
+            className={`${"Services"} ${servicesIsVisible ? "inViewX" : ""}`}
+          >
             <h2 className="services-title">Here&apos;s what we provide:</h2>
             <div className="weekly">
               <img
@@ -182,7 +189,10 @@ export default function Home() {
               ></img>
             </div>
           </div>
-          <div className="Reviews">
+          <div
+            className={`${"Reviews"} ${reviewsIsVisible ? "inViewX" : ""}`}
+            ref={refReviews}
+          >
             {reviewData != null && (
               <>
                 <div className="btn-container">
@@ -244,7 +254,11 @@ export default function Home() {
               </>
             )}
           </div>
-          <div className="form-container" id="form-container">
+          <div
+            ref={refForm}
+            className={`${"form-container"} ${formIsVisible ? "inViewX" : ""}`}
+            id="form-container"
+          >
             <h2 className="form-title">Contact</h2>
             <p className="form-text">
               In case of any specific questions feel free to reach out us!
