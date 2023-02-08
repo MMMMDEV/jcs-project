@@ -15,7 +15,9 @@
 .StimateWalkThrough,
 .CalculateEstimate,
 .DeepCleaning,
-.EstimateFinalDeep {
+.EstimateFinalDeep,
+.GeneralCleaning,
+.ExtraItems {
   width: 100%;
   height: 100%;
   display: flex;
@@ -157,12 +159,84 @@
   background-color: var(--amulet-green);
   border-radius: 0.5rem;
   padding: 0.15em;
+  text-align: center;
 }
 
 /* deep cleaning final */
 
 .final-deepclean-title {
   margin: 0.5em 0em;
+}
+
+.steps-container-deep {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* general cleaning */
+
+.form-container-general {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em var(--padding);
+  gap: 1em;
+}
+
+.num-input-general {
+  width: 1.8rem;
+  height: 1.5rem;
+  border: 0.1rem solid black;
+  background-color: var(--amulet-green);
+  padding: 0.15em;
+  text-align: center;
+}
+
+.input-container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minus-btn,
+.plus-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.minus-btn {
+  border-left: 0.1rem solid black;
+  border-right: 0px solid black;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.plus-btn {
+  border-left: 0rem solid black;
+  border-right: 0.1rem solid black;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.steps-container-general {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
 @keyframes disolveIn {

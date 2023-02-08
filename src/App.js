@@ -14,6 +14,21 @@ import ExtraItems from "./components/ExtraItems";
 import EstimateFinalGeneral from "./components/EstimateFinalGeneral";
 
 function App() {
+  const [inputValues, setInputValues] = useState({
+    bedrooms: 0,
+    bathroom: 0,
+    halfBath: 0,
+    livingRoom: 0,
+    office: 0,
+    pets: 0,
+    oven: 0,
+    fridge: 0,
+  });
+
+  useEffect(() => {
+    console.log(inputValues);
+  }, [inputValues]);
+
   const [feetVal, setFeetVal] = useState(() => {
     const data = localStorage.getItem("feet");
     if (!data) {
@@ -48,11 +63,21 @@ function App() {
         />
         <Route
           path="/stimate-type/calculate/general-clean"
-          element={<GeneralCleaning />}
+          element={
+            <GeneralCleaning
+              inputValues={inputValues}
+              setInputValues={(val) => setInputValues(val)}
+            />
+          }
         />
         <Route
           path="/stimate-type/calculate/general-clean/extras"
-          element={<ExtraItems />}
+          element={
+            <ExtraItems
+              inputValues={inputValues}
+              setInputValues={(val) => setInputValues(val)}
+            />
+          }
         />
         <Route
           path="/stimate-type/calculate/general-clean/extras/final"

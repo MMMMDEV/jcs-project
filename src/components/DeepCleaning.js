@@ -1,11 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function DeepCleaning({ setFeetVal }) {
-  const refVal = useRef();
-
   return (
     <div className="DeepCleaning">
       <nav className="nav">
@@ -28,21 +26,20 @@ export default function DeepCleaning({ setFeetVal }) {
           <div className="selection">
             <label htmlFor="Square">Square ft</label>
             <input
-              ref={refVal}
               type="number"
               className="num-input"
               id="Sqaure"
               min={1750}
-              onChange={() => setFeetVal(refVal.current.value)}
+              onChange={(e) => setFeetVal(e.target.value)}
               required
             ></input>
           </div>
           <button className="btn-next">Next</button>
         </form>
-        <div className="steps-container">
+        <div className="steps-container-deep">
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
-          <div className="circ"></div>
+          <div className="circ circ-filled"></div>
           <div className="circ"></div>
           <div className="circ"></div>
         </div>
