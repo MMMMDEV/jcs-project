@@ -9,6 +9,7 @@ import closeIcon from "../images/close.svg";
 import DeepModalText from "./DeepModalText";
 import WeekModalText from "./WeekModalText";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -62,13 +63,14 @@ export default function Home() {
         const response = await fetch("http://localhost:8000/reviews");
         const data = await response.json();
         setReviewData(data);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       } catch (e) {
         console.log(e);
       }
     })();
   }, []);
-
   useEffect(() => {
     if (classActiveModalWeek === true) {
       setWeekModal("weekModal modal-active");
@@ -120,7 +122,9 @@ export default function Home() {
             <h1 className="hero-text">
               &quot;Where only shine, Is left behind&quot;
             </h1>
-            <button className="hero-cta-btn">Get a quick estimate!</button>
+            <Link to="/stimate-type" className="hero-cta-btn">
+              Get a quick estimate!
+            </Link>
             <div className="overlay"></div>
           </div>
           <div
@@ -265,7 +269,7 @@ export default function Home() {
             </p>
             <form
               className="form"
-              action="https://formsubmit.co/your@email.com"
+              action="https://formsubmit.co/jazizmy@gmail.com"
               method="POST"
             >
               <input

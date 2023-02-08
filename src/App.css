@@ -130,6 +130,9 @@ body {
 .hero-cta-btn {
   width: 11rem;
   height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0px solid transparent;
   border-radius: 0.8rem;
   background-color: black;
@@ -140,6 +143,13 @@ body {
   transform: translateX(-10rem);
   opacity: 0;
   animation: slideInSides var(--animation-speed) forwards;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-cta-btn:visited,
+.hero-cta-btn:active {
+  color: white;
 }
 
 /* --- Services --- */

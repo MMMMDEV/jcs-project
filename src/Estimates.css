@@ -1,0 +1,172 @@
+:root {
+  --dark-green: #549051;
+  --amulet-green: #74a572;
+  --white: #e8e9f3;
+  --gray: #dadce5;
+  --dark-gray: #4f4f4f;
+  --padding: 1.5em;
+  --header-height: 6rem;
+  --animation-speed: 2s;
+  --circ-size: 0.7rem;
+}
+
+/* StimateType */
+.StimateType,
+.StimateWalkThrough,
+.CalculateEstimate,
+.DeepCleaning,
+.EstimateFinalDeep {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0em var(--padding);
+  font-family: "Nunito", sans-serif;
+  opacity: 0;
+  animation: disolveIn 2.5s forwards;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.arrow-back {
+  width: 2rem;
+  margin: 1em 0em;
+}
+
+.options-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4em 0em;
+  gap: 1rem;
+}
+
+.options-promt {
+  width: 25ch;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.option-or {
+  font-style: italic;
+}
+
+.option {
+  width: 15rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.15rem solid black;
+  border-radius: 0.5rem;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.steps-container {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+}
+
+.circ {
+  width: var(--circ-size);
+  height: var(--circ-size);
+  background-color: var(--dark-gray);
+  border: 0px solid transparent;
+  border-radius: 10rem;
+}
+
+.circ-filled {
+  background-color: var(--dark-green);
+}
+
+/* Walk Through */
+
+.form-container-walk,
+.form-container-deep {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em var(--padding);
+}
+
+.contact-btn-send-walk,
+.btn-next {
+  width: 5.7rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: 0px solid transparent;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  margin: 0em;
+}
+
+.btn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 2.5em 0em;
+}
+
+.btn-next:visited,
+.btn-next:active {
+  color: white;
+}
+
+/* deep cleaning */
+
+.selection {
+  width: 15rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.15rem solid black;
+  border-radius: 0.5rem;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0em 1em;
+}
+
+.num-input {
+  width: 5rem;
+  height: 1.5rem;
+  border: 0.1rem solid black;
+  background-color: var(--amulet-green);
+  border-radius: 0.5rem;
+  padding: 0.15em;
+}
+
+/* deep cleaning final */
+
+.final-deepclean-title {
+  margin: 0.5em 0em;
+}
+
+@keyframes disolveIn {
+  to {
+    opacity: 1;
+  }
+}
