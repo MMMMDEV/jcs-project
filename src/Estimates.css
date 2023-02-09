@@ -17,7 +17,10 @@
 .DeepCleaning,
 .EstimateFinalDeep,
 .GeneralCleaning,
-.ExtraItems {
+.ExtraItems,
+.EstimateFinalGeneral,
+.AddReview,
+.Thankyou {
   width: 100%;
   height: 100%;
   display: flex;
@@ -54,7 +57,7 @@
 }
 
 .options-promt {
-  width: 25ch;
+  width: 30ch;
   font-size: 1rem;
   text-align: center;
 }
@@ -165,7 +168,9 @@
 /* deep cleaning final */
 
 .final-deepclean-title {
+  width: 20ch;
   margin: 0.5em 0em;
+  text-align: center;
 }
 
 .steps-container-deep {
@@ -237,6 +242,17 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+}
+
+/* Review */
+
+.AddReview {
+  margin-top: 2em;
+}
+
+.starReview {
+  width: 1.5rem;
+  margin: 1em 0em;
 }
 
 @keyframes disolveIn {

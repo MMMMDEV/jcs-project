@@ -4,7 +4,6 @@ import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function EstimateFinalDeep({ feet }) {
-  // eslint-disable-next-line no-undef
   const price = 0.11;
 
   return (
@@ -20,7 +19,7 @@ export default function EstimateFinalDeep({ feet }) {
       </nav>
       <div className="options-container">
         <h3 className="final-deepclean-title">
-          Your stimate is ${feet * price}
+          Your Deep Cleaning stimate is ${feet * price}
         </h3>
         <p className="options-promt">
           fill the form below and we will reach back to you as soon as possible

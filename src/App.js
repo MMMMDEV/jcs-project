@@ -12,21 +12,32 @@ import EstimateFinalDeep from "./components/EstimateFinalDeep";
 import GeneralCleaning from "./components/GeneralCleaning";
 import ExtraItems from "./components/ExtraItems";
 import EstimateFinalGeneral from "./components/EstimateFinalGeneral";
+import AddReview from "./components/AddReview";
+import Thankyou from "./components/Thankyou";
 
 function App() {
-  const [inputValues, setInputValues] = useState({
-    bedrooms: 0,
-    bathroom: 0,
-    halfBath: 0,
-    livingRoom: 0,
-    office: 0,
-    pets: 0,
-    oven: 0,
-    fridge: 0,
+  const [inputValues, setInputValues] = useState(() => {
+    const data = localStorage.getItem("formInputs");
+    const jsonData = JSON.parse(data);
+    if (!jsonData) {
+      return {
+        bedrooms: 0,
+        bathroom: 0,
+        halfBath: 0,
+        livingRoom: 0,
+        kitchen: 0,
+        office: 0,
+        pets: 0,
+        oven: 0,
+        fridge: 0,
+      };
+    } else {
+      return jsonData;
+    }
   });
 
   useEffect(() => {
-    console.log(inputValues);
+    localStorage.setItem("formInputs", JSON.stringify(inputValues));
   }, [inputValues]);
 
   const [feetVal, setFeetVal] = useState(() => {
@@ -81,8 +92,10 @@ function App() {
         />
         <Route
           path="/stimate-type/calculate/general-clean/extras/final"
-          element={<EstimateFinalGeneral />}
+          element={<EstimateFinalGeneral inputValues={inputValues} />}
         />
+        <Route path="/Review" element={<AddReview />} />
+        <Route path="/Thankyou" element={<Thankyou />} />
       </Routes>
     </div>
   );

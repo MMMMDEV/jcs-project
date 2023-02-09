@@ -164,9 +164,9 @@ body {
   font-family: "Lato", sans-serif;
   position: relative;
   gap: 3rem;
-  transform: translateX(-20rem);
+  transform: translateX(-10rem);
   opacity: 0;
-  transition: var(--animation-speed) ease-in-out;
+  animation: slideInSides var(--animation-speed) forwards;
 }
 
 .services-title {
@@ -300,6 +300,7 @@ li {
   transition: 400ms ease-in-out;
   opacity: 0;
   position: absolute;
+  margin-top: 1em;
 }
 
 .review-container {
@@ -311,20 +312,10 @@ li {
   opacity: 1;
 }
 
-.title-rating-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .star {
   width: 1.5rem;
-  margin: 1.5em 0em;
-}
-
-.service-type-title {
-  font-size: 1rem;
+  margin-top: 1em;
+  margin-bottom: 0em;
 }
 
 .stars-container {
@@ -337,10 +328,15 @@ li {
   font-size: 1rem;
   font-style: italic;
   text-align: center;
-  margin: 2em 0em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .name-review {
+  margin-top: 2em;
+  width: 4rem;
+  height: 2rem;
+  text-align: right;
   align-self: flex-end;
 }
 

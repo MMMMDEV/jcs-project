@@ -23,12 +23,16 @@ export default function GeneralCleaning({ setInputValues, inputValues }) {
   }
 
   function subtractItem(e) {
-    setInputValues((prev) => {
-      return {
-        ...prev,
-        [e.target.name]: prev[e.target.name] - 1,
-      };
-    });
+    if (inputValues[e.target.name] === 0) {
+      return;
+    } else {
+      setInputValues((prev) => {
+        return {
+          ...prev,
+          [e.target.name]: prev[e.target.name] - 1,
+        };
+      });
+    }
   }
 
   return (
@@ -197,6 +201,37 @@ export default function GeneralCleaning({ setInputValues, inputValues }) {
               ></input>
               <button
                 name="office"
+                className="plus-btn"
+                onClick={addItem}
+                type="button"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div className="selection">
+            <label htmlFor="Kitchen">Kitchen</label>
+            <div className="input-container">
+              <button
+                name="kitchen"
+                className="minus-btn"
+                onClick={subtractItem}
+                type="button"
+              >
+                -
+              </button>
+              <input
+                name="kitchen"
+                type="number"
+                className="num-input-general"
+                id="Kitchen"
+                min={0}
+                value={inputValues.kitchen}
+                onChange={handleChange}
+                required
+              ></input>
+              <button
+                name="kitchen"
                 className="plus-btn"
                 onClick={addItem}
                 type="button"

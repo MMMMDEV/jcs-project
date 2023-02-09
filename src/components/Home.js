@@ -20,7 +20,6 @@ export default function Home() {
   const [overlay, setOverlay] = useState("overlay-all");
   const [classActiveModalWeek, setclassActiveModalWeek] = useState(false);
   const [classActiveModalDeep, setclassActiveModalDeep] = useState(false);
-  const { ref: refServices, inView: servicesIsVisible } = useInView();
   const { ref: refReviews, inView: reviewsIsVisible } = useInView();
   const { ref: refForm, inView: formIsVisible } = useInView();
 
@@ -28,7 +27,7 @@ export default function Home() {
     if (count < 3) {
       setCount(count + 1);
     } else if (count === 3) {
-      setCount(count - 1);
+      setCount(0);
     }
   }
 
@@ -127,10 +126,7 @@ export default function Home() {
             </Link>
             <div className="overlay"></div>
           </div>
-          <div
-            ref={refServices}
-            className={`${"Services"} ${servicesIsVisible ? "inViewX" : ""}`}
-          >
+          <div className="Services">
             <h2 className="services-title">Here&apos;s what we provide:</h2>
             <div className="weekly">
               <img
@@ -211,7 +207,6 @@ export default function Home() {
                 <div className="review-container">
                   <Review
                     name={reviewData[0].name}
-                    serviceType={reviewData[0].serviceType}
                     message={reviewData[0].message}
                     rating={reviewData[0].rating}
                     id={0}
@@ -220,7 +215,6 @@ export default function Home() {
                   />
                   <Review
                     name={reviewData[1].name}
-                    serviceType={reviewData[1].serviceType}
                     message={reviewData[1].message}
                     rating={reviewData[1].rating}
                     id={1}
@@ -229,7 +223,6 @@ export default function Home() {
                   />
                   <Review
                     name={reviewData[2].name}
-                    serviceType={reviewData[2].serviceType}
                     message={reviewData[2].message}
                     rating={reviewData[2].rating}
                     id={2}
@@ -238,7 +231,6 @@ export default function Home() {
                   />
                   <Review
                     name={reviewData[3].name}
-                    serviceType={reviewData[3].serviceType}
                     message={reviewData[3].message}
                     rating={reviewData[3].rating}
                     id={3}

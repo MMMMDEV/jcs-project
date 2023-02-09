@@ -6,7 +6,6 @@ import filledStar from "../images/StarFilled.svg";
 
 export default function Review({
   name,
-  serviceType,
   message,
   rating,
   newClass,
@@ -23,37 +22,34 @@ export default function Review({
 
   return (
     <div className={currentClass()}>
-      <div className="title-rating-container">
-        <p className="service-type-title">{serviceType}</p>
-        <div className="stars-container">
-          <img
-            className="star"
-            alt="small empty star"
-            src={1 <= rating ? filledStar : star}
-          ></img>
-          <img
-            className="star"
-            alt="small empty star"
-            src={2 <= rating ? filledStar : star}
-          ></img>
-          <img
-            className="star"
-            alt="small empty star"
-            src={3 <= rating ? filledStar : star}
-          ></img>
-          <img
-            className="star"
-            alt="small empty star"
-            src={4 <= rating ? filledStar : star}
-          ></img>
-          <img
-            className="star"
-            alt="small empty star"
-            src={5 <= rating ? filledStar : star}
-          ></img>
-        </div>
-      </div>
       <p className="message-review">&quot;{message}&quot;</p>
+      <div className="stars-container">
+        <img
+          className="star"
+          alt="small empty star"
+          src={1 <= rating ? filledStar : star}
+        ></img>
+        <img
+          className="star"
+          alt="small empty star"
+          src={2 <= rating ? filledStar : star}
+        ></img>
+        <img
+          className="star"
+          alt="small empty star"
+          src={3 <= rating ? filledStar : star}
+        ></img>
+        <img
+          className="star"
+          alt="small empty star"
+          src={4 <= rating ? filledStar : star}
+        ></img>
+        <img
+          className="star"
+          alt="small empty star"
+          src={5 <= rating ? filledStar : star}
+        ></img>
+      </div>
       <p className="name-review">-{name}</p>
     </div>
   );
