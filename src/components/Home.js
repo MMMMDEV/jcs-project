@@ -170,24 +170,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className={weekModal}>
-              <WeekModalText />
-              <img
-                onClick={deActivateModalsWeek}
-                className="close-icon"
-                src={closeIcon}
-                alt="a X icon to close modal"
-              ></img>
-            </div>
-            <div className={DeepModal}>
-              <DeepModalText />
-              <img
-                onClick={deActivateModalsDeep}
-                className="close-icon"
-                src={closeIcon}
-                alt="a X icon to close modal"
-              ></img>
-            </div>
           </div>
           <div
             className={`${"Reviews"} ${reviewsIsVisible ? "inViewX" : ""}`}
@@ -301,6 +283,24 @@ export default function Home() {
               © 2023 Jaziz&apos;s Cleaning Service
             </h4>
           </footer>
+          <div className={weekModal}>
+            <WeekModalText />
+            <img
+              onClick={deActivateModalsWeek}
+              className="close-icon"
+              src={closeIcon}
+              alt="a X icon to close modal"
+            ></img>
+          </div>
+          <div className={DeepModal}>
+            <DeepModalText />
+            <img
+              onClick={deActivateModalsDeep}
+              className="close-icon"
+              src={closeIcon}
+              alt="a X icon to close modal"
+            ></img>
+          </div>
           <div className={overlay}></div>
         </>
       )}
