@@ -1,9 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function GeneralCleaning({ setInputValues, inputValues }) {
+  const navigate = useNavigate();
+
+  function handle(e) {
+    e.preventDefault();
+
+    navigate("/stimate-type/calculate/general-clean/extras");
+  }
+
   function handleChange(e) {
     setInputValues((prev) => {
       return {
@@ -50,10 +58,7 @@ export default function GeneralCleaning({ setInputValues, inputValues }) {
         <p className="options-promt">
           Please choose the amount of rooms you would like to include
         </p>
-        <form
-          action="/stimate-type/calculate/general-clean/extras"
-          className="form-container-general"
-        >
+        <form onSubmit={handle} className="form-container-general">
           <div className="selection">
             <label htmlFor="Bedrooms">Bedrooms</label>
             <div className="input-container">

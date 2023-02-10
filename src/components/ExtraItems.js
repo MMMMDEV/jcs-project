@@ -1,9 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function ExtraItems({ setInputValues, inputValues }) {
+  const navigate = useNavigate();
+
+  function handle(e) {
+    e.preventDefault();
+
+    navigate("/stimate-type/calculate/general-clean/extras/final");
+  }
+
   function handleChange(e) {
     setInputValues((prev) => {
       return {
@@ -44,10 +52,7 @@ export default function ExtraItems({ setInputValues, inputValues }) {
       </nav>
       <div className="options-container">
         <p className="options-promt">Please choose any extras</p>
-        <form
-          action="/stimate-type/calculate/general-clean/extras/final"
-          className="form-container-general"
-        >
+        <form onSubmit={handle} className="form-container-general">
           <div className="selection">
             <label htmlFor="Pets">Pets</label>
             <div className="input-container">

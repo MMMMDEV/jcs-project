@@ -1,9 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function DeepCleaning({ setFeetVal }) {
+  const navigate = useNavigate();
+
+  function handle(e) {
+    e.preventDefault();
+
+    navigate("/stimate-type/calculate/deep-cleaning/final");
+  }
+
   return (
     <div className="DeepCleaning">
       <nav className="nav">
@@ -19,10 +27,7 @@ export default function DeepCleaning({ setFeetVal }) {
         <p className="options-promt">
           Please include the square footage of your home
         </p>
-        <form
-          action="/stimate-type/calculate/deep-cleaning/final"
-          className="form-container-deep"
-        >
+        <form onSubmit={handle} className="form-container-deep">
           <div className="selection">
             <label htmlFor="Square">Square ft</label>
             <input
