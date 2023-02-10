@@ -94,7 +94,7 @@ function App() {
           path="/stimate-type/calculate/general-clean/extras/final"
           element={<EstimateFinalGeneral inputValues={inputValues} />}
         />
-        <Route path="/Review" element={<AddReview />} />
+        {/* <Route path="/Review" element={<AddReview />} /> */}
         <Route path="/Thankyou" element={<Thankyou />} />
       </Routes>
     </div>

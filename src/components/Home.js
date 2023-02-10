@@ -55,21 +55,22 @@ export default function Home() {
     setclassActiveModalDeep(false);
   }
 
-  useEffect(() => {
-    (async function () {
-      try {
-        setLoading(true);
-        const response = await fetch("http://localhost:8000/reviews");
-        const data = await response.json();
-        setReviewData(data);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000);
-      } catch (e) {
-        console.log(e);
-      }
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async function () {
+  //     try {
+  //       setLoading(true);
+  //       const response = await fetch("http://localhost:8000/reviews");
+  //       const data = await response.json();
+  //       setReviewData(data);
+  //       setTimeout(() => {
+  //         setLoading(false);
+  //       }, 1000);
+  //     } catch (e) {
+  //       console.log(e);
+  //     }
+  //   })();
+  // }, []);
+
   useEffect(() => {
     if (classActiveModalWeek === true) {
       setWeekModal("weekModal modal-active");
@@ -171,7 +172,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className={`${"Reviews"} ${reviewsIsVisible ? "inViewX" : ""}`}
             ref={refReviews}
           >
@@ -231,7 +232,7 @@ export default function Home() {
                 </div>
               </>
             )}
-          </div>
+          </div> */}
           <div
             ref={refForm}
             className={`${"form-container"} ${formIsVisible ? "inViewX" : ""}`}
