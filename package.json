@@ -2,7 +2,7 @@
   "description": "my react application",
   "name": "jcs-project",
   "version": "0.1.0",
-  "homepage": "jazizcs.net/",
+  "homepage": "https://jazizcs.net/",
   "private": true,
   "dependencies": {
     "@babel/eslint-parser": "^7.19.1",
