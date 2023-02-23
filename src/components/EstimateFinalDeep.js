@@ -4,7 +4,10 @@ import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function EstimateFinalDeep({ feet }) {
-  const price = 0.11;
+  const price = 0.14;
+
+  const overall = price * feet;
+  const total = Math.floor(overall + 10);
 
   return (
     <div className="EstimateFinalDeep">
@@ -19,11 +22,11 @@ export default function EstimateFinalDeep({ feet }) {
       </nav>
       <div className="options-container">
         <h3 className="final-deepclean-title">
-          Your Deep Cleaning stimate is ${feet * price}
+          Your Deep Cleaning estimate is ${total}
         </h3>
         <p className="options-promt">
-          fill the form below and we will reach back to you as soon as possible
-          to schedule a time!
+          fill out the form below and we will reach back to you as soon as
+          possible to schedule a time!
         </p>
         <div className="form-container-walk">
           <form
@@ -53,7 +56,7 @@ export default function EstimateFinalDeep({ feet }) {
               className="contact-input"
               type="hidden"
               name="message"
-              value={`${"Deep Cleaning: stimate of "} ${feet * price}`}
+              value={`${"Deep Cleaning: stimate of "} ${total}`}
             ></input>
             <button className="contact-btn-send-walk" type="submit">
               Send

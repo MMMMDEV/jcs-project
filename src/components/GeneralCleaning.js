@@ -91,7 +91,7 @@ export default function GeneralCleaning({ setInputValues, inputValues }) {
             </div>
           </div>
           <div className="selection">
-            <label htmlFor="Bathroom">Bathroom</label>
+            <label htmlFor="Bathroom">Bathrooms</label>
             <div className="input-container">
               <button
                 name="bathroom"

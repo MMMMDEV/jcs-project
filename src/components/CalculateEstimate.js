@@ -21,7 +21,7 @@ export default function CalculateEstimate() {
         </Link>
         <p className="option-or">Or</p>
         <Link className="option" to="/stimate-type/calculate/general-clean">
-          GeneralCleaning
+          General Cleaning
         </Link>
         <div className="steps-container">
           <div className="circ circ-filled"></div>

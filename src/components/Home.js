@@ -10,6 +10,11 @@ import DeepModalText from "./DeepModalText";
 import WeekModalText from "./WeekModalText";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import { Link as Scroll } from "react-scroll";
+import pic1 from "../images/pic1.jpg";
+import pic2 from "../images/pic2.jpg";
+import pic3 from "../images/pic3.jpg";
+import pic4 from "../images/pic4.jpg";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -22,6 +27,11 @@ export default function Home() {
   const [classActiveModalDeep, setclassActiveModalDeep] = useState(false);
   const { ref: refReviews, inView: reviewsIsVisible } = useInView();
   const { ref: refForm, inView: formIsVisible } = useInView();
+  const { ref: refGallery, inView: GalleryIsVisible } = useInView();
+  const { ref: refPic1, inView: pic1IsVisible } = useInView();
+  const { ref: refPic2, inView: pic2IsVisible } = useInView();
+  const { ref: refPic3, inView: pic3IsVisible } = useInView();
+  const { ref: refPic4, inView: pic4IsVisible } = useInView();
 
   function addCount() {
     if (count < 3) {
@@ -114,9 +124,17 @@ export default function Home() {
               src={logo}
               alt="logo JCS, Jaziz's cleaning service"
             ></img>
-            <a className="contact-link" href="#form-container">
+            <Scroll
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={300}
+              className="contact-link"
+              to="form-container"
+            >
               Contact me
-            </a>
+            </Scroll>
           </header>
           <div className="Hero">
             <h1 className="hero-text">
@@ -136,7 +154,7 @@ export default function Home() {
                 alt="a small duster inside a circle"
               />
               <div className="weekly-desc">
-                <h3 className="weekly-title">weekly / Bi-Weekly</h3>
+                <h3 className="weekly-title">Weekly / Bi-Weekly</h3>
                 <p className="weekly-paragraph">
                   This is a general cleaning of the
                   <strong> Kitchen, Living room, Bathrooms, Bedrooms.</strong>
@@ -159,7 +177,7 @@ export default function Home() {
               <div className="deep-clean-desc">
                 <h3 className="deep-clean-title">Deep cleaning</h3>
                 <p className="deep-clean-paragraph">
-                  One time cleaning done with more precision, for those bigger
+                  One-time cleaning done with more precision, for those bigger
                   and messier jobs.
                 </p>
                 <button
@@ -170,6 +188,53 @@ export default function Home() {
                   Learn More
                 </button>
               </div>
+            </div>
+          </div>
+          <div className="Gallery" ref={refGallery}>
+            <h2
+              ref={refPic1}
+              className={` ${"tittle-Gallery"} ${
+                pic1IsVisible ? "inViewX" : ""
+              } `}
+            >
+              Gallery
+            </h2>
+            <div
+              className="pics
+            "
+            >
+              <img
+                ref={refPic1}
+                src={pic1}
+                alt="a microwave that's dirty and after being cleaned"
+                className={` ${"gallery-pics"} ${
+                  pic1IsVisible ? "inViewX" : ""
+                } `}
+              ></img>
+              <img
+                ref={refPic2}
+                src={pic2}
+                alt="a oven that's dirty and after being cleaned"
+                className={` ${"gallery-pics"} ${
+                  pic2IsVisible ? "inViewX" : ""
+                } `}
+              ></img>
+              <img
+                ref={refPic3}
+                src={pic3}
+                alt="a tub that's dirty and after being cleaned"
+                className={` ${"gallery-pics"} ${
+                  pic3IsVisible ? "inViewX" : ""
+                } `}
+              ></img>
+              <img
+                ref={refPic4}
+                src={pic4}
+                alt="a bathroom fan that's dirty and after being cleaned"
+                className={` ${"gallery-pics"} ${
+                  pic4IsVisible ? "inViewX" : ""
+                } `}
+              ></img>
             </div>
           </div>
           {/* <div
@@ -240,7 +305,7 @@ export default function Home() {
           >
             <h2 className="form-title">Contact</h2>
             <p className="form-text">
-              In case of any specific questions feel free to reach out us!
+              In case of any specific questions feel free to reach out to us!
             </p>
             <form
               className="form"

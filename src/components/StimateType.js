@@ -16,11 +16,11 @@ export default function StimateType() {
       </nav>
       <div className="options-container">
         <p className="options-promt">
-          Would you like a walk through or a calculated estimate based on rooms
-          and bathrooms?
+          Would you like a walk-through or a calculated estimate based on the
+          rooms and bathrooms?
         </p>
         <Link className="option" to="/stimate-type/walk-through">
-          Walk through
+          Walk-through
         </Link>
         <p className="option-or">Or</p>
         <Link className="option" to="/stimate-type/calculate">

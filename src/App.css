@@ -81,6 +81,7 @@ body {
   text-decoration: none;
   transform: translateY(calc(var(--header-height) * -1));
   animation: slideInVertical var(--animation-speed) forwards;
+  cursor: pointer;
 }
 
 .contact-link:visited,
@@ -366,6 +367,49 @@ li {
   width: 1.6rem;
 }
 
+/* Gallery */
+
+.Gallery {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  flex-direction: column;
+  margin-top: 4em;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  gap: 2em;
+}
+
+.tittle-Gallery {
+  width: 100%;
+  font-size: 1.3rem;
+  align-self: flex-start;
+  transform: translateX(-20rem);
+  opacity: 0;
+  transition: var(--animation-speed) ease-in-out;
+  font-family: "Lato", sans-serif;
+}
+
+.pics {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.gallery-pics {
+  width: 100%;
+  transform: translateX(-20rem);
+  opacity: 0;
+  transition: var(--animation-speed) ease-in-out;
+}
+
 /* Form */
 
 .form-container {
@@ -570,7 +614,7 @@ li {
 
 /* tablet verticle */
 
-@media screen and (width > 700px) and (height < 1200px) {
+@media screen and (width > 700px) and (height > 1000px) {
   :root {
     --padding: 5.5em;
     --header-height: 7rem;
@@ -668,6 +712,13 @@ li {
     font-size: 1.1rem;
   }
 
+  /* gallery */
+
+  .pics {
+    width: 80%;
+    gap: 4em;
+  }
+
   /* form */
 
   .form {
@@ -713,7 +764,7 @@ li {
 
 /* desktop verticle */
 
-@media screen and (width > 700px) and (height > 1200px) {
+@media screen and (width > 920px) and (height > 1400px) {
   :root {
     --padding: 8em;
     --header-height: 6rem;
@@ -861,7 +912,7 @@ li {
 
 /* phone landscape */
 
-@media screen and (width > 600px) and (height < 420px) {
+@media screen and (width < 920px) and (height < 420px) {
   :root {
     --padding: 5em;
     --header-height: 6rem;
@@ -964,6 +1015,13 @@ li {
     font-size: 1.1rem;
   }
 
+  /* gallery */
+
+  .pics {
+    width: 80%;
+    gap: 4em;
+  }
+
   /* form */
 
   .form {
@@ -1009,7 +1067,7 @@ li {
 
 /* tablet landscape */
 
-@media screen and (width > 600px) and (height < 420px) {
+@media screen and (width > 920px) and (height > 420px) {
   :root {
     --padding: 7em;
     --header-height: 6rem;
@@ -1110,6 +1168,13 @@ li {
 
   .name-review {
     font-size: 1.1rem;
+  }
+
+  /* gallery */
+
+  .pics {
+    width: 60%;
+    gap: 4em;
   }
 
   /* form */
@@ -1258,6 +1323,13 @@ li {
 
   .name-review {
     font-size: 1.2rem;
+  }
+
+  /* gallery */
+
+  .pics {
+    width: 60%;
+    gap: 4em;
   }
 
   /* form */

@@ -13,6 +13,7 @@ export default function EstimateFinalGeneral({ inputValues }) {
   const petsPrice = inputValues.pets * 10;
   const fridgePrice = inputValues.fridge * 20;
   const ovenPrice = inputValues.oven * 20;
+  const travelFee = 10;
 
   const total =
     bedroomPrice +
@@ -23,8 +24,8 @@ export default function EstimateFinalGeneral({ inputValues }) {
     officePrice +
     petsPrice +
     fridgePrice +
-    ovenPrice;
-
+    ovenPrice +
+    travelFee;
   return (
     <div className="EstimateFinalGeneral">
       <nav className="nav">
@@ -38,11 +39,11 @@ export default function EstimateFinalGeneral({ inputValues }) {
       </nav>
       <div className="options-container">
         <h3 className="final-deepclean-title">
-          Your General Cleaning stimate is $ {total}
+          Your General Cleaning estimate is $ {total}
         </h3>
         <p className="options-promt">
-          fill the form below and we will reach back to you as soon as possible
-          to schedule a time!
+          fill out the form below and we will reach back to you as soon as
+          possible to schedule a time!
         </p>
         <div className="form-container-walk">
           <form

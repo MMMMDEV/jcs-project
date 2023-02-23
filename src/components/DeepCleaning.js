@@ -34,7 +34,8 @@ export default function DeepCleaning({ setFeetVal }) {
               type="number"
               className="num-input"
               id="Sqaure"
-              min={1750}
+              min={1500}
+              max={2500}
               onChange={(e) => setFeetVal(e.target.value)}
               required
             ></input>
