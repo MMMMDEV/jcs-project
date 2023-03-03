@@ -156,8 +156,8 @@ export default function Home() {
               <div className="weekly-desc">
                 <h3 className="weekly-title">Weekly / Bi-Weekly</h3>
                 <p className="weekly-paragraph">
-                  This is a general cleaning of the
-                  <strong> Kitchen, Living room, Bathrooms, Bedrooms.</strong>
+                  Weekly starting at $105<br></br>
+                  Bi-Weekly starting at $105
                 </p>
                 <button
                   onClick={activateModalsWeek}

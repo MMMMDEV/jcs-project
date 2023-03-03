@@ -24,7 +24,7 @@ export default function StimateType() {
         </Link>
         <p className="option-or">Or</p>
         <Link className="option" to="/stimate-type/calculate">
-          Calculate estimate
+          Get estimate
         </Link>
         <div className="steps-container">
           <div className="circ circ-filled"></div>

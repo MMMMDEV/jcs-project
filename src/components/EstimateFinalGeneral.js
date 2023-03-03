@@ -38,9 +38,6 @@ export default function EstimateFinalGeneral({ inputValues }) {
         </Link>
       </nav>
       <div className="options-container">
-        <h3 className="final-deepclean-title">
-          Your General Cleaning estimate is $ {total}
-        </h3>
         <p className="options-promt">
           fill out the form below and we will reach back to you as soon as
           possible to schedule a time!
