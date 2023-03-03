@@ -157,7 +157,7 @@ export default function Home() {
                 <h3 className="weekly-title">Weekly / Bi-Weekly</h3>
                 <p className="weekly-paragraph">
                   Weekly starting at $105<br></br>
-                  Bi-Weekly starting at $105
+                  Bi-Weekly starting at $135
                 </p>
                 <button
                   onClick={activateModalsWeek}
