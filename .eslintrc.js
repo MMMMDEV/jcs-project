@@ -13,6 +13,6 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "no-console": "off",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
   },
 };

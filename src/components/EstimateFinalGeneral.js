@@ -26,6 +26,7 @@ export default function EstimateFinalGeneral({ inputValues }) {
     fridgePrice +
     ovenPrice +
     travelFee;
+
   return (
     <div className="EstimateFinalGeneral">
       <nav className="nav">
@@ -71,6 +72,22 @@ export default function EstimateFinalGeneral({ inputValues }) {
               type="hidden"
               name="message"
               value={`${"General Cleaning: stimate of "} ${total}`}
+            ></input>
+            <input
+              className="contact-input"
+              type="hidden"
+              name="message"
+              value={
+                (("Bedrooms: ", inputValues.bedrooms),
+                ("Bathrooms: ", inputValues.bathroom),
+                ("Half Baths: ", inputValues.halfBath),
+                ("Living Rooms: ", inputValues.livingRoom),
+                ("Kitchens: ", inputValues.kitchen),
+                ("Offices: ", inputValues.office),
+                ("Pets: ", inputValues.pets),
+                ("Friges: ", inputValues.fridge),
+                ("Ovens: ", inputValues.oven))
+              }
             ></input>
             <button className="contact-btn-send-walk" type="submit">
               Send
