@@ -20,12 +20,13 @@ export default function CalculateEstimate() {
           Deep Cleaning
         </Link>
         <p className="option-or">Or</p>
-        <Link className="option" to="/stimate-type/calculate/general-clean">
+        <Link className="option" to="/stimate-type/calculate/frequency">
           General Cleaning
         </Link>
         <div className="steps-container">
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
+          <div className="circ"></div>
           <div className="circ"></div>
           <div className="circ"></div>
           <div className="circ"></div>

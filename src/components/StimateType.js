@@ -32,6 +32,7 @@ export default function StimateType() {
           <div className="circ"></div>
           <div className="circ"></div>
           <div className="circ"></div>
+          <div className="circ"></div>
         </div>
       </div>
     </div>

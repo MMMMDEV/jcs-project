@@ -35,8 +35,9 @@ export default function DeepCleaning({ setFeetVal }) {
               className="num-input"
               id="Sqaure"
               min={1500}
-              max={2500}
+              max={4500}
               onChange={(e) => setFeetVal(e.target.value)}
+              placeholder="Ex: 1500"
               required
             ></input>
           </div>
@@ -46,6 +47,7 @@ export default function DeepCleaning({ setFeetVal }) {
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
+          <div className="circ"></div>
           <div className="circ"></div>
           <div className="circ"></div>
         </div>

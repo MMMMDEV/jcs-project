@@ -27,10 +27,29 @@ export default function EstimateFinalGeneral({ inputValues }) {
     ovenPrice +
     travelFee;
 
+  const text = {
+    "Bedrooms:": inputValues.bedrooms,
+    "Bathrooms:": inputValues.bathroom,
+    "Half Baths:": inputValues.halfBath,
+    "Living Rooms:": inputValues.livingRoom,
+    "Kitchens:": inputValues.kitchen,
+    "Offices:": inputValues.office,
+    "Pets:": inputValues.pets,
+    "Friges:": inputValues.fridge,
+    "Ovens:": inputValues.oven,
+    "Square ft": inputValues.squareFT,
+    frequency: inputValues.frequency,
+    zipcode: inputValues.zipcode,
+    "Hidden fee:": travelFee,
+    "General Cleaning: stimate of": total,
+  };
+
+  const stringText = JSON.stringify(text);
+
   return (
     <div className="EstimateFinalGeneral">
       <nav className="nav">
-        <Link to="/stimate-type/calculate/general-clean/extras">
+        <Link to="/stimate-type/calculate/frequency/general-clean/extras">
           <img
             src={arrowBack}
             className="arrow-back"
@@ -71,23 +90,7 @@ export default function EstimateFinalGeneral({ inputValues }) {
               className="contact-input"
               type="hidden"
               name="message"
-              value={`${"General Cleaning: stimate of "} ${total}`}
-            ></input>
-            <input
-              className="contact-input"
-              type="hidden"
-              name="message"
-              value={
-                (("Bedrooms: ", inputValues.bedrooms),
-                ("Bathrooms: ", inputValues.bathroom),
-                ("Half Baths: ", inputValues.halfBath),
-                ("Living Rooms: ", inputValues.livingRoom),
-                ("Kitchens: ", inputValues.kitchen),
-                ("Offices: ", inputValues.office),
-                ("Pets: ", inputValues.pets),
-                ("Friges: ", inputValues.fridge),
-                ("Ovens: ", inputValues.oven))
-              }
+              value={stringText}
             ></input>
             <button className="contact-btn-send-walk" type="submit">
               Send
@@ -95,6 +98,7 @@ export default function EstimateFinalGeneral({ inputValues }) {
           </form>
         </div>
         <div className="steps-container">
+          <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>

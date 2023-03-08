@@ -175,7 +175,9 @@ export default function Home() {
                 alt="a small spray bottle inside a circle"
               ></img>
               <div className="deep-clean-desc">
-                <h3 className="deep-clean-title">Deep cleaning</h3>
+                <h3 className="deep-clean-title">
+                  Deep cleaning / Move in - Move out
+                </h3>
                 <p className="deep-clean-paragraph">
                   One-time cleaning done with more precision, for those bigger
                   and messier jobs.

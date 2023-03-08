@@ -10,6 +10,7 @@ import CalculateEstimate from "./components/CalculateEstimate";
 import DeepCleaning from "./components/DeepCleaning";
 import EstimateFinalDeep from "./components/EstimateFinalDeep";
 import GeneralCleaning from "./components/GeneralCleaning";
+import Frequency from "./components/Frequency";
 import ExtraItems from "./components/ExtraItems";
 import EstimateFinalGeneral from "./components/EstimateFinalGeneral";
 import AddReview from "./components/AddReview";
@@ -30,6 +31,9 @@ function App() {
         pets: 0,
         oven: 0,
         fridge: 0,
+        frequency: "",
+        squareFT: 0,
+        zipcode: 0,
       };
     } else {
       return jsonData;
@@ -73,7 +77,16 @@ function App() {
           element={<EstimateFinalDeep feet={feetVal} />}
         />
         <Route
-          path="/stimate-type/calculate/general-clean"
+          path="/stimate-type/calculate/frequency"
+          element={
+            <Frequency
+              inputValues={inputValues}
+              setInputValues={(val) => setInputValues(val)}
+            />
+          }
+        ></Route>
+        <Route
+          path="/stimate-type/calculate/frequency/general-clean"
           element={
             <GeneralCleaning
               inputValues={inputValues}
@@ -82,7 +95,7 @@ function App() {
           }
         />
         <Route
-          path="/stimate-type/calculate/general-clean/extras"
+          path="/stimate-type/calculate/frequency/general-clean/extras"
           element={
             <ExtraItems
               inputValues={inputValues}
@@ -91,7 +104,7 @@ function App() {
           }
         />
         <Route
-          path="/stimate-type/calculate/general-clean/extras/final"
+          path="/stimate-type/calculate/frequency/general-clean/extras/final"
           element={<EstimateFinalGeneral inputValues={inputValues} />}
         />
         {/* <Route path="/Review" element={<AddReview />} /> */}

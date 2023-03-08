@@ -4,10 +4,17 @@ import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function EstimateFinalDeep({ feet }) {
-  const price = 0.14;
+  const price = 0.25;
 
   const overall = price * feet;
-  const total = Math.floor(overall + 10);
+  const total = Math.floor(overall + 10 + 50);
+
+  const text = {
+    "Squared ft:": feet,
+    "Deep Cleaning: stimate of": total,
+  };
+
+  const stringText = JSON.stringify(text);
 
   return (
     <div className="EstimateFinalDeep">
@@ -53,7 +60,7 @@ export default function EstimateFinalDeep({ feet }) {
               className="contact-input"
               type="hidden"
               name="message"
-              value={`${"Deep Cleaning: stimate of "} ${total}`}
+              value={stringText}
             ></input>
             <button className="contact-btn-send-walk" type="submit">
               Send
@@ -61,6 +68,7 @@ export default function EstimateFinalDeep({ feet }) {
           </form>
         </div>
         <div className="steps-container">
+          <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>

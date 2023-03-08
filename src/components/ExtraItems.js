@@ -9,7 +9,7 @@ export default function ExtraItems({ setInputValues, inputValues }) {
   function handle(e) {
     e.preventDefault();
 
-    navigate("/stimate-type/calculate/general-clean/extras/final");
+    navigate("/stimate-type/calculate/frequency/general-clean/extras/final");
   }
 
   function handleChange(e) {
@@ -42,7 +42,7 @@ export default function ExtraItems({ setInputValues, inputValues }) {
   return (
     <div className="ExtraItems">
       <nav className="nav">
-        <Link to="/stimate-type/calculate/general-clean">
+        <Link to="/stimate-type/calculate/frequency/general-clean">
           <img
             src={arrowBack}
             className="arrow-back"
@@ -149,6 +149,7 @@ export default function ExtraItems({ setInputValues, inputValues }) {
           <button className="btn-next">Next</button>
         </form>
         <div className="steps-container-general">
+          <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
           <div className="circ circ-filled"></div>
