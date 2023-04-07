@@ -5,15 +5,16 @@ import PropTypes from "prop-types";
 
 export default function EstimateFinalGeneral({ inputValues }) {
   const bedroomPrice = inputValues.bedrooms * 12;
-  const bathroomPrice = inputValues.bathroom * 30;
-  const halfbathPrice = inputValues.halfBath * 15;
+  const bathroomPrice = inputValues.bathroom * 25;
+  const halfbathPrice = inputValues.halfBath * 12.5;
   const livingRoomPrice = inputValues.livingRoom * 25;
-  const kitchenPrice = inputValues.kitchen * 30;
+  const kitchenPrice = inputValues.kitchen * 25;
   const officePrice = inputValues.office * 10;
   const petsPrice = inputValues.pets * 10;
-  const fridgePrice = inputValues.fridge * 20;
-  const ovenPrice = inputValues.oven * 20;
-  const travelFee = 10;
+  const fridgePrice = inputValues.fridge * 25;
+  const ovenPrice = inputValues.oven * 50;
+  const Material = 25;
+  const Company = 35;
 
   const total =
     bedroomPrice +
@@ -25,7 +26,8 @@ export default function EstimateFinalGeneral({ inputValues }) {
     petsPrice +
     fridgePrice +
     ovenPrice +
-    travelFee;
+    Material +
+    Company;
 
   const text = {
     "Bedrooms:": inputValues.bedrooms,
@@ -38,9 +40,13 @@ export default function EstimateFinalGeneral({ inputValues }) {
     "Friges:": inputValues.fridge,
     "Ovens:": inputValues.oven,
     "Square ft": inputValues.squareFT,
-    frequency: inputValues.frequency,
-    zipcode: inputValues.zipcode,
-    "Hidden fee:": travelFee,
+    // prettier-ignore
+    "frequency": inputValues.frequency,
+    // prettier-ignore
+    "zipcode": inputValues.zipcode,
+    "Material:": Material,
+    // prettier-ignore
+    "Company": Company,
     "General Cleaning: stimate of": total,
   };
 

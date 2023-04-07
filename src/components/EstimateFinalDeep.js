@@ -4,7 +4,7 @@ import arrowBack from "../images/arrow-back.svg";
 import PropTypes from "prop-types";
 
 export default function EstimateFinalDeep({ feet }) {
-  const price = 0.25;
+  const price = 0.15;
 
   const overall = price * feet;
   const total = Math.floor(overall + 10 + 50);

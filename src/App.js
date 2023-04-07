@@ -13,7 +13,6 @@ import GeneralCleaning from "./components/GeneralCleaning";
 import Frequency from "./components/Frequency";
 import ExtraItems from "./components/ExtraItems";
 import EstimateFinalGeneral from "./components/EstimateFinalGeneral";
-import AddReview from "./components/AddReview";
 import Thankyou from "./components/Thankyou";
 
 function App() {
