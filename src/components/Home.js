@@ -154,53 +154,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="Gallery" ref={refGallery}>
-            <h2
-              ref={refPic1}
-              className={` ${"tittle-Gallery"} ${
-                pic1IsVisible ? "inViewX" : ""
-              } `}
-            >
-              Gallery
-            </h2>
-            <div
-              className="pics
-            "
-            >
-              <img
-                ref={refPic1}
-                src={pic1}
-                alt="a microwave that's dirty and after being cleaned"
-                className={` ${"gallery-pics"} ${
-                  pic1IsVisible ? "inViewX" : ""
-                } `}
-              ></img>
-              <img
-                ref={refPic2}
-                src={pic2}
-                alt="a oven that's dirty and after being cleaned"
-                className={` ${"gallery-pics"} ${
-                  pic2IsVisible ? "inViewX" : ""
-                } `}
-              ></img>
-              <img
-                ref={refPic3}
-                src={pic3}
-                alt="a tub that's dirty and after being cleaned"
-                className={` ${"gallery-pics"} ${
-                  pic3IsVisible ? "inViewX" : ""
-                } `}
-              ></img>
-              <img
-                ref={refPic4}
-                src={pic4}
-                alt="a bathroom fan that's dirty and after being cleaned"
-                className={` ${"gallery-pics"} ${
-                  pic4IsVisible ? "inViewX" : ""
-                } `}
-              ></img>
-            </div>
-          </div>
           <div
             ref={refForm}
             className={`${"form-container"} ${formIsVisible ? "inViewX" : ""}`}
