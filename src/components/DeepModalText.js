@@ -3,74 +3,29 @@ import React from "react";
 export default function DeepModalText() {
   return (
     <div className="Modal-text">
-      <h4>KITCHEN</h4>
-      <ul className="list-items">
-        <li>Clean the microwave. (inside and outside)</li>
-        <li>Clean inside the refrigerator (inside and outside)</li>
-        <li>Clean the oven (inside and outside).</li>
-        <li>Clean the hood vent.</li>
-        <li>Clean stove top burners.</li>
-        <li>Clean the hood vent.</li>
-        <li>Clean stove top burners.</li>
-        <li>Clean and disinfect coffee maker.</li>
-        <li>Clean front cabinet doors.</li>
-        <li>Disinfect door knobs</li>
-        <li>Clean light fixtures </li>
-        <li>Floors vacuumed and mopped</li>
-      </ul>
-      <h4>BATHROOMS</h4>
-      <ul className="list-items">
-        <li>Dust vents from the ceiling</li>
-        <li>Dust and wipe light fixtures.</li>
-        <li>Clean mirrors.</li>
-        <li>Clean and disinfect light switches</li>
-        <li>Clean shower door frame</li>
-        <br></br>
-        <li>Clean shower glass.</li>
-        <li>Disinfect counter-tops.</li>
-        <li>Dust and clean windows.</li>
-        <li>Scrub and disinfect the toilet</li>
-        <li>Scrub the bathtub and/or shower.</li>
-        <li>Scrub walls.</li>
-        <li>Scrub walls. (some stains)</li>
-        <li>Wash the toilet.</li>
-        <li>
-          Wipe down cabinets, knobs, towel racks, and toilet paper holders.
-        </li>
-        <li>Dust exhaust fan.</li>
-        <li>Floors vacuumed and mopped</li>
-        <li>Trash emptied</li>
-      </ul>
-      <h4>LIVING ROOM/FAMILY AREAS</h4>
-      <ul className="list-items">
-        <li>Dust ceiling, corners, and upper and lower.</li>
-        <li>Dust ceiling fans.</li>
-        <li>Dust lamps.</li>
-        <li>Clean light fixtures</li>
-        <li>Dust edges of wall hangings and mirrors.</li>
-        <li>Dust window frames, inside sills, and baseboards.</li>
-        <li>Clean windows</li>
-        <li>Vacuum all carpet areas.</li>
-        <li>Sweep and mop under carpets.</li>
-        <li>Vacuum under furniture.</li>
-        <li>Sweep and mop under carpets.</li>
-        <li>Floors vacuumed and mopped.</li>
-      </ul>
-      <h4>BEDROOMS</h4>
-      <ul className="list-items">
-        <li>Dust ceiling, corners, and upper and lower.</li>
-        <li>Dust window frames, inside sills and baseboard.</li>
-        <li>Dust and polish furniture.</li>
-        <li>Dust edges of wall hangings and mirrors.</li>
-        <li>Dust lamps.</li>
-        <li>Dust ceiling fan.</li>
-        <li>Clean light fixtures.</li>
-        <li>Vacuum under bed.</li>
-        <li>Vacuum carpet and under furniture.</li>
-        <li>Floors vacuumed and mopped.</li>
-        <li>disinfect door knobs and light switch plates.</li>
-      </ul>
-      <p>(Special projects for an additional cost)</p>
+      <h4>Deep Cleaning Service:</h4>
+      <p>
+        Our deep cleaning service goes beyond the surface, providing an
+        intensive and thorough cleaning for your home. Ideal for periodic
+        maintenance or special occasions, this service targets areas that often
+        accumulate dust, grime, and dirt over time. We meticulously clean
+        hard-to-reach spots, sanitize high-touch surfaces, and address hidden
+        corners, ensuring a refreshed and revitalized living space. Choose our
+        deep cleaning service for a comprehensive, top-to-bottom rejuvenation
+        that leaves your home impeccably clean and inviting.
+      </p>
+      <h4>Move In/Move Out Cleaning Service:</h4>
+      <p>
+        Moving in or out? Our specialized Move In/Move Out cleaning service is
+        designed to make the transition seamless and stress-free. Whether
+        you&#39;re settling into a new home or preparing to leave, our team
+        ensures a spotless environment. We focus on deep cleaning all areas,
+        including inside cabinets, appliances, baseboards, and light fixtures.
+        This thorough service eliminates accumulated dust and grime, leaving
+        your space immaculate and ready for its next chapter. Choose our Move
+        In/Move Out cleaning for a fresh start or to leave your previous space
+        in impeccable condition.
+      </p>
     </div>
   );
 }
