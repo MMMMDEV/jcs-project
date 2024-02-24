@@ -137,28 +137,60 @@ body,
   padding-bottom: 5rem;
 }
 
-.services-section {
+.estimate-form {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  font-family: "Poppins";
+  gap: 2rem;
+}
+
+.services-section,
+.frequency-section,
+.zipcode-section,
+.home-section,
+.extras-section,
+.pets-section {
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 1rem;
 }
 
 .service-btn {
-  width: 11rem;
+  width: 100%;
   padding: 0.3rem 0rem;
   font-size: 0.9rem;
 }
 
-.frequency-section {
+.zipcode-input {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 1rem;
+  text-align: center;
+}
+
+.home-size-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.extra-item-btn {
+  width: 50%;
+  font-size: 0.9rem;
+}
+
+.pet-btn {
+  width: 50%;
+  font-size: 0.9rem;
 }
 
 /* Footer */
