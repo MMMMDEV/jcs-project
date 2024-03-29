@@ -1,10 +1,22 @@
 import React, { useEffect, useState } from "react";
 import logo from "../images/Logo.png";
+import logo3 from "../images/Logo3.svg";
 import { Link as Scroll } from "react-scroll";
 import GetStimate from "./GetStimate";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
+  const [logoIcon, setLogoIcon] = useState(logo);
+
+  const windowWidth = window.innerWidth;
+
+  useEffect(() => {
+    if (windowWidth > 1100) {
+      setLogoIcon(logo3);
+    } else {
+      setLogoIcon(logo);
+    }
+  }, []);
 
   return (
     <div className="Home">
@@ -26,7 +38,7 @@ export default function Home() {
           <header className="Header">
             <img
               className="logo"
-              src={logo}
+              src={logoIcon}
               alt="logo JCS, Jaziz's cleaning service"
             ></img>
             <Scroll

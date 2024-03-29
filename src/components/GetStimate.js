@@ -444,10 +444,11 @@ export default function GetStimate() {
           </div>
           <button
             type="submit"
+            className="form-submit-btn"
             style={{
               backgroundColor: "black",
               color: "white",
-              padding: "0.3rem 0.7rem",
+              padding: "0.5rem 0.7rem",
               fontSize: "0.9rem",
               border: "0",
               borderRadius: "0.2rem",
