@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import slide1 from "../images/slideImg1.jpg";
 
 export default function GetStimate() {
   const [serviceSelected, setServiceSelected] = useState({
@@ -459,6 +460,9 @@ export default function GetStimate() {
           </button>
         </span>
       </form>
+      <div className="gallery">
+        <img src={slide1} className="img-container" alt="pic 1"></img>
+      </div>
     </section>
   );
 }
